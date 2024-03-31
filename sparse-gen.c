@@ -123,20 +123,20 @@ int main(int argc, char * argv[]) {
                   input_filename = output_filename;
                   output_filename = duplicateStr(optarg);
               } else {
-                  fprintf(stderr, "Bad command line\n");
+                  fprintf(stderr, "Bad command arguments\n");
                   print_help_and_exit(EXIT_FAILURE);
               }
               break;
 
           case '?':
-              fprintf(stderr, "Bad command line\n");
+              fprintf(stderr, "Bad command arguments\n");
               print_help_and_exit(EXIT_FAILURE);
               break;
         }
     }
 
     if (output_filename == NULL) {
-        fprintf(stderr, "Bad command line\n");
+        fprintf(stderr, "Output file not selected\n");
         print_help_and_exit(EXIT_FAILURE);
     }
 
